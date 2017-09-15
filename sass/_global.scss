@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; outline:0; }
+a, a:active, a:focus, a:visited, a:hover { outline: none; text-decoration: none;  transition: 0.5s; }
+body {font-family:Source Sans Pro, Arial, Helvetica, sans-serif; }
+h1 { font: 700 44px/44px Source Sans Pro, Arial, Helvetica, sans-serif; }
+h2 { font: 700 44px/44px Source Sans Pro, Arial, Helvetica, sans-serif; }
+h3 { font: 700 28px/40px Source Sans Pro, Arial, Helvetica, sans-serif; }
+h4 { font: 700 24px/40px Source Sans Pro, Arial, Helvetica, sans-serif; }
+h5 { font: 700 22px/40px Source Sans Pro, Arial, Helvetica, sans-serif; }
+h6 { font: 700 20px/40px Source Sans Pro, Arial, Helvetica, sans-serif; }
+p { font: 400 16px/30px Source Sans Pro, Arial, Helvetica, sans-serif; color:#999999; }
+ul { margin: 0; }
+ul li { list-style: none; color: inherit; font: 400 16px/24px Source Sans Pro, Arial, Helvetica, sans-serif; transition: 0.5s;  list-style:square;  }
+ol li { font: 400 16px/30px Source Sans Pro, Arial, Helvetica, sans-serif;  }
+ul li a:hover { color: inherit; transition: 0.5s; }
+
+
+
+/********************* Global variable start here ************************/
+  
+$white:#fff;
+
+
+ .red-heading{
+        font: 700 50px/24px Damion, Arial, Helvetica, sans-serif; 
+        color:#ff2749;
+        span{
+            color:#999999;
+            font: 400 50px/24px Source Sans Pro, Arial, Helvetica, sans-serif;
+        }
+    }
+
+.global-heading{
+      font: 700 55px/40px Source Sans Pro, Arial, Helvetica, sans-serif; 
+       &:after, &:before {
+          content: '';
+          display: inline-block;
+          height: 6px;
+          width: 50px;
+          background: #000;
+          position: relative;
+          top: -15px;
+       }
+    
+    &:after{
+        left:11px;
+    }
+    
+    &:before {
+       right:11px; 
+    }
+}
+
+
+/********************* Global variable ended here ************************/
+
+
+
+/********************* prefixer start here ************************/
+ @mixin transform($transform-value){
+    transform: $transform-value;
+    -webkit-transform: $transform-value;
+    -moz-transform: $transform-value;
+    -o-transform: $transform-value;
+    -ms-transform: $transform-value;
+}
+
+/********************* prefixer ended here ************************/
+
+
+
+
+@mixin large-desktop{
+    @media (min-width: 1600px) {
+      @content;   
+     }
+}
+
+@mixin table-landscape{
+    @media (min-width: 768px) and (max-width: 1599px) {
+      @content;   
+     }
+}
+
+@mixin normal-tab-landscape{
+    @media (min-width: 768px) and (max-width: 1199px) {
+      @content;   
+     }
+}
+
+@mixin table-portrait{
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;   
+     }
+}
+
+@mixin phone-tab{
+    @media (max-width: 991px) {
+      @content;  
+        
+     }
+}
+
+@mixin phone{
+    @media (max-width: 767px) {
+      @content;  
+        
+     }
+}
+
+
+/********************* phone global fix start here ************************/
+
+
+@include phone{
+    .global-heading{ 
+         font: 700 35px/40px Source Sans Pro, Arial, Helvetica, sans-serif; 
+        &:after, &:before {
+            top:-7px;
+        }
+    }
+}
+
+
+/********************* phone global fix ended here ************************/
+

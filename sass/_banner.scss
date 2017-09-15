@@ -1,0 +1,76 @@
+.banner{ 
+
+ position: relative;
+ background: #000 image-url('banner-background.jpg') no-repeat right bottom;
+ background-size:cover;
+ height:100vh;
+ width:100%;
+    
+.banner-caption {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: $white;
+    h2 {
+        .one {font: 600 23px/24px Source Sans Pro, Arial, Helvetica, sans-serif; text-decoration:underline; }
+        .two {font: 300 106px/106px Source Sans Pro, Arial, Helvetica, sans-serif;  }
+        .three{font: 700 95px/95px Source Sans Pro, Arial, Helvetica, sans-serif; }
+        .four {font: 700 95px/95px Source Sans Pro, Arial, Helvetica, sans-serif; }
+        .five {font: 400 24px/24px Source Sans Pro, Arial, Helvetica, sans-serif;  }
+    }
+}
+}
+
+.center-image-cover {
+    
+    text-align: center;
+    height: 0;
+    
+    .center-image {
+        height: 290px;
+        width: 290px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 18px solid #666666;
+        display: inline-block;
+        position: relative;
+        @include  transform(translateY(-50%));
+    }
+}
+
+
+@include phone{
+    .banner{
+            .banner-caption {
+          //            @include transform(scale(0.7));
+                  position: absolute;
+                  bottom: 0;
+                  display: inline-block;
+                  height: 100vh;
+                  width: 100vw;
+                  top: inherit;
+                  left: 0;
+                    h2 {
+                        position: absolute;
+                        bottom: 0;
+                        background:rgba(0, 0, 0, 0.76);
+                        width: 100%;
+                        padding: 0px 10px 5px;
+                        margin: 0;
+                    
+                    .one {font: 600 23px/24px Source Sans Pro, Arial, Helvetica, sans-serif; text-decoration:underline; }
+                    .two {font: 300 53px/53px Source Sans Pro, Arial, Helvetica, sans-serif;  }
+                    .three{font: 700 54px/42px Source Sans Pro, Arial, Helvetica, sans-serif; }
+                    .four {font: 700 54px/42px Source Sans Pro, Arial, Helvetica, sans-serif; }
+                    .five {
+                             font: 400 18px/15px Source Sans Pro, Arial, Helvetica, sans-serif;
+                             display: inherit;
+                             float: left;
+                             margin: 5px 0 10px 0;
+                         }
+}
+            
+        }
+    }
+}

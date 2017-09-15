@@ -1,0 +1,72 @@
+footer{
+    padding:327px 0 150px;
+    background: #323232;
+    position:relative;
+    
+    
+    &:before{
+        height: 131px;
+        content:'';
+        width: 100%;
+        background: image-url('footer-arrow.png') no-repeat top center;
+        position:absolute;
+        top:0;
+        left:0;
+        
+    }
+    
+    .footer-logo{
+            display: inline-block;
+        }
+    
+    .footer-nav{
+           margin-top:40px; 
+        li{
+            margin: 0 10px;
+            a{
+                 color:#999999;
+        font: 600 30px/24px Source Sans Pro, Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+    
+    .social-icon-cover{
+          margin-top:50px;
+        .social-icon{
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            margin: 0 5px;  
+        }
+    }
+    
+    .bottom-title{
+          font: 600 30px/24px Source Sans Pro, Arial, Helvetica, sans-serif;
+          margin-top:55px;
+          color:$white;
+    }
+}
+
+
+@include phone {
+    footer {
+        padding: 181px 0 39px;
+        .footer-nav {
+            li {
+                    margin: 0 5px;
+                a {
+                    font: 600 18px/20px Source Sans Pro, Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+        
+        .social-icon-cover{
+           margin-top: 25px;
+        }
+        
+        .bottom-title {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+}

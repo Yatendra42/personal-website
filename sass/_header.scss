@@ -1,0 +1,150 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    
+    .logo{
+        padding:7.4vh;
+        display: inline-block; 
+        position:relative;
+        z-index:2;
+    }
+    
+    .nav-cover{ 
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity:0;
+        visibility:hidden;
+        transition: 0.5s;
+    nav {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+        ul{
+            margin: 0 auto;
+            li{
+                list-style: none;
+                margin:20px 0;
+                a{
+                    color:$white;
+                    font: 700 50px/50px Source Sans Pro, Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+    }
+    
+    
+    .toggle {
+        display: inline-block;
+        margin: 0;
+        width: 47px;
+        height: 31px;
+        display: inline-block;
+        float: left;
+        cursor: pointer;
+        position: absolute;
+        right: 7vh;
+        top: 10.5vh;
+        z-index:2;
+        span {
+            height: 6px;
+            width: 44px;
+            background: $white;
+            display: inline-block;
+            position: absolute;
+            top: 12px;
+            left: 0;
+        }
+}
+
+.toggle:before,
+.toggle:after {
+    height: 6px;
+    width: 44px;
+    background: $white;
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+}
+
+.toggle:before {
+    top: 0px;
+}
+
+.toggle:after {
+    top: 24px;
+}
+
+
+    
+    
+}
+
+.openNav .toggle span {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.openNav .toggle:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: 12px;
+}
+
+.openNav .toggle:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    top: 12px;
+}
+
+.openNav .nav-cover{ 
+        opacity:1;
+        visibility:visible;
+}
+
+ 
+@include phone{
+    header {
+        .logo {
+            padding: 30px;
+            img {
+                height: 50px;
+            }
+        }
+        
+        
+        .toggle {
+       right: 20px;
+       top: 40px;
+   }
+        
+        .nav-cover {
+            nav {
+                ul {
+                    li {
+                        a {
+                            color: #fff;
+                            font: 700 30px/30px Source Sans Pro, Arial, Helvetica, sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}  

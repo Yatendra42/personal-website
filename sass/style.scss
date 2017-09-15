@@ -1,0 +1,11 @@
+@import 'global';
+@import 'header';
+@import 'banner';
+@import 'main';
+//@import 'row-fifth'; 
+//@import 'inner'; 
+@import 'footer';
+
+@import "compass/utilities/sprites";
+@import "sprit/*.png";
+@include all-sprit-sprites;
